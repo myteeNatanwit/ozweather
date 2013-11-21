@@ -1,0 +1,89 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta http-equiv="content-language" content="en" />
+<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
+<link rel="stylesheet" href="css/jquery.mobile-1.3.2.min.css" />
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.mobile-1.3.2.min.js"></script>
+<script type="text/javascript" src="js/jquery.bgscroll.js"></script>
+<link href="css/ozwstyle.css" rel="stylesheet" type="text/css" />
+<link href="css/mycss.css" rel="stylesheet" type="text/css" />
+<style>
+body{
+overflow-y:auto;
+-webkit-user-select: none
+}
+</style>
+
+</head>
+<body>
+<!-- Start of setting page -->
+<div data-role="page" id="setting" >
+<div data-role="header" data-theme="b" data-position="fixed">
+<a href="index.html" rel="external" data-icon="back" class="ui-btn-left" >Back</a> 
+<a href="#" onclick="updatedata()" data-icon="grid" data-role="button" data-theme="b" data-inline="true">Update</a>
+		<h1>Location Setting</h1>
+	</div><!-- /header -->
+<div data-role="content" >
+<fieldset data-role="controlgroup" data-iconpos="right">
+        <legend>Select cities</legend>
+        <input type="checkbox" name="checkbox-h-6a" id="cASXX0001" data-theme="e">
+        <label for="cASXX0001">Adelaide</label>
+        <input type="checkbox" name="checkbox-h-6b" id="cASXX0016" data-theme="e">
+        <label for="cASXX0016">Brisbane</label>
+        <input type="checkbox" name="checkbox-h-6c" id="cASXX0023" data-theme="e">
+        <label for="cASXX0023">Canberra</label>
+<input type="checkbox" name="checkbox-h-6c" id="cASXX0032" data-theme="e"> <label for="cASXX0032">Darwin</label>
+<input type="checkbox" name="checkbox-h-6c" id="cASXX0047" data-theme="e"> <label for="cASXX0047">Gold Coast</label>
+<input type="checkbox" name="checkbox-h-6c" id="cASXX0057" data-theme="e"> <label for="cASXX0057">Hobart</label>
+        <input type="checkbox" name="checkbox-h-6c" id="cASXX0075" data-theme="e">
+        <label for="cASXX0075">Melbourne</label>
+<input type="checkbox" name="checkbox-h-6c" id="cASXX0087" data-theme="e"> <label for="cASXX0087">Parramatta</label>        
+        <input type="checkbox" name="checkbox-h-6c" id="cASXX0089" data-theme="e">
+        <label for="cASXX0089">Perth</label>
+<input type="checkbox" name="checkbox-h-6c" id="cASXX0110" data-theme="e"> <label for="cASXX0110">Springvale</label>                
+        <input type="checkbox" name="checkbox-h-6c" id="cASXX0112" data-theme="e">
+        <label for="cASXX0112">Sydney</label>
+    </fieldset>
+                
+</div>
+
+</div><!-- /page -->
+
+<script type="text/javascript">
+var wlist="ASXX0001,ASXX0016,ASXX0023,ASXX0032,ASXX0047,ASXX0057,ASXX0075,ASXX0087,ASXX0089,ASXX0110,ASXX0112,";
+$(document).ready(function () {
+//$("#ct").bgscroll({scrollSpeed:15 , direction:'h' });
+document.ontouchmove = function(e) {e.preventDefault()};
+updatescreen();
+});
+
+function updatescreen() {
+var mlist=localStorage.myweather.split(',');
+for (i=0; i < mlist.length -1; i++)
+  { 
+   s='#c'+  mlist[i];
+   $(s).prop( "checked", true ).checkboxradio( "refresh" );
+   
+  }
+}
+
+$("#saveit" ).bind( "click", function(event, ui) {
+updatedata();
+});
+/* write to local data */
+function updatedata() {
+var mlist=wlist.split(',');
+var mylist="";
+for (i=0; i < mlist.length -1; i++)
+ {
+  s='#c'+ mlist[i];
+  mylist += $(s).is(":checked")? mlist[i]+',':'';
+ }
+localStorage.myweather= mylist;
+}
+
+</script>
+</body>
+</html>
