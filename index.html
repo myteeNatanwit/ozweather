@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Ozweather : Ozweather source code" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Ozweather</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/myteeNatanwit/ozweather">View on GitHub</a>
+
+          <h1 id="project_title">Ozweather</h1>
+          <h2 id="project_tagline">Ozweather source code</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/myteeNatanwit/ozweather/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/myteeNatanwit/ozweather/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>
+<a name="ozweather" class="anchor" href="#ozweather"><span class="octicon octicon-link"></span></a>Ozweather</h1>
+
+<p>Ozweather source code.
+The app is compiled with my framework, submitted to GGplay, Win store n Appstore as free app.</p>
+
+<p>The JQ scripts are:
+1- Zara's weatherfeed, modified to yql as it used YahooQL to suit Au weather code. My first attempt to get geo location fails, somehow it reports my location -Melbourne- is somewhere in NT hence resulting incorrect weather report. I will look at it again when I have time. 
+2-Background scrolling from Simon Kusterer, <a href="https://github.com/xat/jQuery-bgScroll">https://github.com/xat/jQuery-bgScroll</a>. I used it without modification for the cloud horizontal scrolling. In fact, there must be better way to present the Json data from Yahoo. Unfortunately, I discover I dont have that graphic gift. So if you guys can present this app in better way, pls let me know.</p>
+
+<p>To make this into your app, there are few things to do:</p>
+
+<ol>
+<li><p>Delete the copyright div in the index.html ;-), or change it into yours.</p></li>
+<li><p>The setting.html stores the list of Au weather codes. I got them from here <a href="http://edg3.co.uk/snippets/weather-location-codes/australia/">http://edg3.co.uk/snippets/weather-location-codes/australia/</a>
+This list is not completed, I cannot find Foodscray, Richmond in Vic or Banktown in Nsw. Basically, I need to know the weather there to do shopping in weekend anyway. So you can change them as much as you like. The second time, reloading the app will detect new locations. Looks like a bug there.</p></li>
+</ol><p>Something seems not right:</p>
+
+<ol>
+<li><p>It works fine in Android, I tested it on my GS4 and tablet. On IOS, when the app is called from background, it crashes, I dont know why, perhaps I set it onfocus().reload?</p></li>
+<li><p>My friends at work said the setting screen-JQueryMobile 2.3- seems not proportional right after they got it built with Phonegap. I built it with my own framework, code generated to run with Ant for android, and Xcode for IOS so have no glue why it doesnt work with Phonegap. On other hand, phonegap has ... so many versions, dont know what to track or debug. </p></li>
+</ol><p>What next from here?
+Drop me a line or two if you got into new issues. of course, if I make any new version from it, you will get update if u folk me.</p>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Ozweather maintained by <a href="https://github.com/myteeNatanwit">myteeNatanwit</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
