@@ -1,45 +1,60 @@
-<!DOCTYPE html>
+<!doctype html>
+<!-- The Time Machine GitHub pages theme was designed and developed by Jon Rohan, on Feb 7, 2012. -->
+<!-- Follow him for fun. http://twitter.com/jonrohan. Tail his code on http://github.com/jonrohan -->
 <html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-  <head>
-    <meta charset='utf-8' />
-    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta name="description" content="Ozweather : Ozweather source code" />
+  <link rel="stylesheet" href="stylesheets/stylesheet.css" media="screen"/>
+  <link rel="stylesheet" href="stylesheets/pygment_trac.css"/>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <script type="text/javascript" src="javascripts/script.js"></script>
 
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+  <title>Ozweather</title>
+  <meta name="description" content="Ozweather source code">
 
-    <title>Ozweather</title>
-  </head>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
 
-  <body>
+</head>
 
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/myteeNatanwit/ozweather">View on GitHub</a>
+<body>
 
-          <h1 id="project_title">Ozweather</h1>
-          <h2 id="project_tagline">Ozweather source code</h2>
-
-            <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/myteeNatanwit/ozweather/zipball/master">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/myteeNatanwit/ozweather/tarball/master">Download this project as a tar.gz file</a>
-            </section>
-        </header>
-    </div>
-
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <h1>
+  <div class="wrapper">
+    <header>
+      <h1 class="title">Ozweather</h1>
+    </header>
+    <div id="container">
+      <p class="tagline">Ozweather source code</p>
+      <div id="main" role="main">
+        <div class="download-bar">
+        <div class="inner">
+          <a href="https://github.com/myteeNatanwit/ozweather/tarball/master" class="download-button tar"><span>Download</span></a>
+          <a href="https://github.com/myteeNatanwit/ozweather/zipball/master" class="download-button zip"><span>Download</span></a>
+          <a href="https://github.com/myteeNatanwit/ozweather" class="code">View Ozweather on GitHub</a>
+        </div>
+        <span class="blc"></span><span class="trc"></span>
+        </div>
+        <article class="markdown-body">
+          <h1>
 <a name="ozweather" class="anchor" href="#ozweather"><span class="octicon octicon-link"></span></a>Ozweather</h1>
+
+<p><img src="http://i1363.photobucket.com/albums/r708/MyteeNathanwit/screenshot/screenshot1_zps7d984b88.png" alt="scr1"><img src="http://i1363.photobucket.com/albums/r708/MyteeNathanwit/screenshot/screenshot2_zps9d8b25f6.png" alt="scr2"></p>
 
 <p>Ozweather source code.
 The app is compiled with my framework, submitted to GGplay, Win store n Appstore as free app.</p>
 
-<p>The JQ scripts are:
-1- Zara's weatherfeed, modified to yql as it used YahooQL to suit Au weather code. My first attempt to get geo location fails, somehow it reports my location -Melbourne- is somewhere in NT hence resulting incorrect weather report. I will look at it again when I have time. 
-2-Background scrolling from Simon Kusterer, <a href="https://github.com/xat/jQuery-bgScroll">https://github.com/xat/jQuery-bgScroll</a>. I used it without modification for the cloud horizontal scrolling. In fact, there must be better way to present the Json data from Yahoo. Unfortunately, I discover I dont have that graphic gift. So if you guys can present this app in better way, pls let me know.</p>
+<h1>
+<a name="info" class="anchor" href="#info"><span class="octicon octicon-link"></span></a>Info</h1>
+
+<p>The JQ scripts are:</p>
+
+<p>1- Zara's weatherfeed, modified to yql as it used YahooQL to suit Au weather code. My first attempt to get geo location fails, somehow it reports my location -Melbourne- is somewhere in NT hence resulting incorrect weather report. I will look at it again when I have time. </p>
+
+<p>2-Background scrolling from Simon Kusterer, <a href="https://github.com/xat/jQuery-bgScroll">https://github.com/xat/jQuery-bgScroll</a>. I used it without modification for the cloud horizontal scrolling. In fact, there must be better way to present the Json data from Yahoo. Unfortunately, I discover I dont have that graphic gift. So if you guys can present this app in better way, pls let me know.</p>
+
+<h1>
+<a name="usage" class="anchor" href="#usage"><span class="octicon octicon-link"></span></a>Usage</h1>
 
 <p>To make this into your app, there are few things to do:</p>
 
@@ -47,25 +62,36 @@ The app is compiled with my framework, submitted to GGplay, Win store n Appstore
 <li><p>Delete the copyright div in the index.html ;-), or change it into yours.</p></li>
 <li><p>The setting.html stores the list of Au weather codes. I got them from here <a href="http://edg3.co.uk/snippets/weather-location-codes/australia/">http://edg3.co.uk/snippets/weather-location-codes/australia/</a>
 This list is not completed, I cannot find Foodscray, Richmond in Vic or Banktown in Nsw. Basically, I need to know the weather there to do shopping in weekend anyway. So you can change them as much as you like. The second time, reloading the app will detect new locations. Looks like a bug there.</p></li>
-</ol><p>Something seems not right:</p>
+</ol><h1>
+<a name="something-seems-not-right" class="anchor" href="#something-seems-not-right"><span class="octicon octicon-link"></span></a>Something seems not right:</h1>
 
 <ol>
 <li><p>It works fine in Android, I tested it on my GS4 and tablet. On IOS, when the app is called from background, it crashes, I dont know why, perhaps I set it onfocus().reload?</p></li>
 <li><p>My friends at work said the setting screen-JQueryMobile 2.3- seems not proportional right after they got it built with Phonegap. I built it with my own framework, code generated to run with Ant for android, and Xcode for IOS so have no glue why it doesnt work with Phonegap. On other hand, phonegap has ... so many versions, dont know what to track or debug. </p></li>
-</ol><p>What next from here?
-Drop me a line or two if you got into new issues. of course, if I make any new version from it, you will get update if u folk me.</p>
-      </section>
+</ol><h1>
+<a name="what-next-from-here" class="anchor" href="#what-next-from-here"><span class="octicon octicon-link"></span></a>What next from here?</h1>
+
+<p>Drop me a line or two if you got into new issues. Of course, if I make any new version, you will get update if u folk.</p>
+        </article>
+      </div>
     </div>
+    <footer>
+      <div class="owner">
+      <p><a href="https://github.com/myteeNatanwit" class="avatar"><img src="https://1.gravatar.com/avatar/f0f39962c046684f9448e41fd931cd3e?d=https%3A%2F%2Fidenticons.github.com%2F231a195486a523101c3eac7b8337394c.png&amp;r=x&amp;s=60" width="48" height="48"/></a> <a href="https://github.com/myteeNatanwit">myteeNatanwit</a> maintains <a href="https://github.com/myteeNatanwit/ozweather">Ozweather</a></p>
 
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p class="copyright">Ozweather maintained by <a href="https://github.com/myteeNatanwit">myteeNatanwit</a></p>
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
-      </footer>
-    </div>
 
-    
+      </div>
+      <div class="creds">
+        <small>This page generated using <a href="http://pages.github.com/">GitHub Pages</a><br/>theme by <a href="https://twitter.com/jonrohan/">Jon Rohan</a></small>
+      </div>
+    </footer>
+  </div>
+  <div class="current-section">
+    <a href="#top">Scroll to top</a>
+    <a href="https://github.com/myteeNatanwit/ozweather/tarball/master" class="tar">tar</a><a href="https://github.com/myteeNatanwit/ozweather/zipball/master" class="zip">zip</a><a href="" class="code">source code</a>
+    <p class="name"></p>
+  </div>
 
-  </body>
+  
+</body>
 </html>
